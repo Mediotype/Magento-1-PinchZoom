@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mediotype_PinchZoom>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mediotype_Core />
+                <Mage_Catalog />
+            </depends>
+        </Mediotype_PinchZoom>
+    </modules>
+</config>

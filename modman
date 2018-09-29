@@ -1,0 +1,5 @@
+app/code/community/Mediotype/PinchZoom/ app/code/community/Mediotype/PinchZoom/
+app/design/frontend/base/default/layout/mediotype/pinchzoom/pinchzoom.xml app/design/frontend/base/default/layout/mediotype/pinchzoom/pinchzoom.xml
+app/design/frontend/base/default/template/mediotype/pinchzoom/media.phtml app/design/frontend/base/default/template/mediotype/pinchzoom/media.phtml
+app/etc/modules/Mediotype_PinchZoom.xml app/etc/modules/Mediotype_PinchZoom.xml
+skin/frontend/base/default/mediotype/pinchzoom/ skin/frontend/base/default/mediotype/pinchzoom/

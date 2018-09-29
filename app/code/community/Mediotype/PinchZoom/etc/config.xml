@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mediotype_PinchZoom>
+            <version>1.0.0</version>
+        </Mediotype_PinchZoom>
+    </modules>
+    <global>
+        <blocks>
+            <mediotype_pinchzoom>
+                <class>Mediotype_PinchZoom_Block</class>
+            </mediotype_pinchzoom>
+        </blocks>
+        <helpers>
+            <mediotype_pinchzoom>
+                <class>Mediotype_PinchZoom_Helper</class>
+            </mediotype_pinchzoom>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <mediotype_pinchzoom>
+                    <file>mediotype/pinchzoom/pinchzoom.xml</file>
+                </mediotype_pinchzoom>
+            </updates>
+        </layout>
+    </frontend>
+    <phpunit>
+        <suite>
+            <modules>
+                <Mediotype_PinchZoom />
+            </modules>
+        </suite>
+    </phpunit>
+</config>

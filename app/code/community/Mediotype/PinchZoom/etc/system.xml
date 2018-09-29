@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <mediotype_pinchzoom translate="label" module="mediotype_pinchzoom">
+            <label>Pinch Zoom</label>
+            <tab>mediotype</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1001</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <imageOptions translate="label" module="mediotype_pinchzoom">
+                    <label>Image Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[<div class="mediotype-section-description mediotype-box"><p>A jQuery plugin integration for seemlessly enabling beautiful image zooms with touch, simplicity, and responsive sites</p></div>]]></comment>
+                    <fields>
+                        <adjustHeight translate="label" module="mediotype_pinchzoom">
+                            <label>Adjust Height</label>
+                            <tooltip>The accepted value is any number. This determines how much height (in pixels) you want to add or remove to your image.</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </adjustHeight>
+                        <adjustWidth translate="label" module="mediotype_pinchzoom">
+                            <label>Adjust Width</label>
+                            <tooltip>The accepted value is any number. This determines how much width (in pixels) you want to add or remove to your image.</tooltip>
+                            <validate>validate-number</validate>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </adjustWidth>
+                        <animDuration translate="label" module="mediotype_pinchzoom">
+                            <label>Animation Duration</label>
+                            <tooltip>The accepted value is any positive number. This determines how long (in seconds) is the animation.</tooltip>
+                            <validate>validate-not-negative-number</validate>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </animDuration>
+                        <doubleTapZoom translate="label" module="mediotype_pinchzoom">
+                            <label>Double Tap Zoom</label>
+                            <tooltip>The accepted value is any positive number. This value is the scale when the image is double tapped or double clicked.</tooltip>
+                            <validate>validate-not-negative-number</validate>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </doubleTapZoom>
+                        <maxZoom translate="label" module="mediotype_pinchzoom">
+                            <label>Max Zoom</label>
+                            <tooltip>The accepted value is any positive number more than 1.This determines the maximum zoom of the image.</tooltip>
+                            <validate>validate-greater-than-zero</validate>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxZoom>
+                        <scaleMode translate="label" module="mediotype_pinchzoom">
+                            <label>Scale Mode</label>
+                            <tooltip>This determines the initial width and height of the image. For more info check out the next section below.</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </scaleMode>
+                        <zoomStep translate="label" module="mediotype_pinchzoom">
+                            <label>Zoom Step</label>
+                            <tooltip>The accepted value is any positive number. This determines how much scale you want to add or remove in the image when zoom control buttons are pressed.</tooltip>
+                            <validate>validate-zero-or-greater</validate>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zoomStep>
+                    </fields>
+                </imageOptions>
+            </groups>
+        </mediotype_pinchzoom>
+    </sections>
+</config>

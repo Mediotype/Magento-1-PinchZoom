@@ -1,0 +1,82 @@
+<?php
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+/** @var $this Mediotype_PinchZoom_Block_Catalog_Product_Media */
+$config = $this->getConfig();
+if (Mage::helper('mediotype_core/debugger')->getEnabled()) {
+    Mediotype_Core_Helper_Debugger::log($config);
+}
+
+$_product = $this->getProduct();
+$_helper = $this->helper('catalog/output');
+?>
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+    <p class="product-image product-image-zoom">
+        <?php
+        $_img = '<img  id="image" src="' . $this->helper('catalog/image')->init(
+                $_product,
+                'image'
+            ) . '" alt="' . $this->escapeHtml($this->getImageLabel()) . '" title="' . $this->escapeHtml(
+                $this->getImageLabel()
+            ) . '" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+        ?>
+    </p>
+<?php else: ?>
+    <p class="product-image">
+        <?php
+        $_img = '<img id="product-image" src="' . $this->helper('catalog/image')->init($_product, 'image')->resize(
+                265
+            ) . '" alt="' . $this->escapeHtml($this->getImageLabel()) . '" title="' . $this->escapeHtml(
+                $this->getImageLabel()
+            ) . '" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+        ?>
+    </p>
+<?php endif; ?>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+    <div class="more-views">
+        <h2><?php echo $this->__('More Views') ?></h2>
+        <ul>
+            <?php foreach ($this->getGalleryImages() as $_image): ?>
+                <li>
+                    <a href="#" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>">
+                        <img
+                            pinch-zoom-src="<?php echo $this->helper('catalog/image')->init(
+                                $this->getProduct(),
+                                'thumbnail',
+                                $_image->getFile()
+                            ); ?>"
+
+                            src="<?php echo $this->helper('catalog/image')->init(
+                                $this->getProduct(),
+                                'thumbnail',
+                                $_image->getFile()
+                            )->resize(56); ?>" width="56" height="56"
+                            alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>"/></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+<script type="text/javascript">
+
+    jQuery( document ).ready(function() {
+        jQuery("#image").pinchzoomer();
+
+        jQuery('.more-views li a').on('click' , function(elm){
+            var element = elm.target;
+            var newImage = jQuery(element).attr('pinch-zoom-src');
+            PinchZoomer.removeAll();
+            jQuery('.product-image-zoom').empty();
+            jQuery(".product-image-zoom").append("<img id='image' src='" + newImage + "'/>");
+            jQuery("#image").pinchzoomer();
+        });
+    });
+
+</script>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>mediotype/pinchzoom/pinchzoomer.min.css</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/jquery-1.11.0.min.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/jquery.mousewheel.min.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/jquery.hammer.min.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/modernizr.min.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/TweenMax.min.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/jquery.pinchzoomer.js</name>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>mediotype/pinchzoom/swap.js</name>
+            </action>
+
+        </reference>
+        <reference name="product.info">
+            <block type="mediotype_pinchzoom/catalog_product_media" name="product.info.media" as="media" template="mediotype/pinchzoom/media.phtml"/>
+        </reference>
+    </catalog_product_view>
+</layout>
